@@ -1,0 +1,42 @@
+h1 {
+  text-align: center;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+ol, ul {
+  padding: 10px;
+  list-style-position: inside;
+}
+
+ol {
+  border: 1px solid red;
+  border-radius: 15px;
+  font-weight: 300;
+}
+
+ul {
+  border: 1px dashed red;
+  border-radius: 15px;
+  font-weight: 300;
+  list-style-type: upper-roman;
+}
+
+#bottom-div {
+  width: 100%;
+  margin-top: 60%;
+  float: right;
+  margin-bottom: 20px;
+  text-align: right;
+}
+
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
