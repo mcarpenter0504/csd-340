@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Assignment 9.3 - JavaScript Exercise">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="author" content="Madilyn Carpenter">
+    <meta name="pragma" content="no-cache">
+    <link href="carpenter_Mod9_3.css" type="text/css" rel="stylesheet"/>
+    
+    <script>
+        var firstWord = "force";
+        var secondWord = "lightsaber";
+        var thirdWord = "galaxy";
+        var fourthWord = "hope";
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+        <p>Obi-Wan Kenobi said, "The <span id="first">_________</span> is strong with this one."</p>
+        <p>Luke Skywalker lifted his <span id="second">_________</span> and faced the dark side of the Empire.</p>
+        <p>Leia Organa inspired the Rebellion, reminding everyone that the <span id="third">_________</span> is full of courage and that there is always <span id="fourth">_________</span>."</p>
+
+        <p>
+            <button type="button" onclick="document.getElementById('first').innerHTML = firstWord">Fill First Blank</button><br>
+            <button type="button" onclick="document.getElementById('second').innerHTML = secondWord">Fill Second Blank</button><br>
+            <button type="button" onclick="document.getElementById('third').innerHTML = thirdWord">Fill Third Blank</button><br>
+            <button type="button" onclick="document.getElementById('fourth').innerHTML = fourthWord">Fill Fourth Blank</button>
+        </p>
+
+        <hr/>
+
+        <address>
+            <p><a href="https://www.bellevue.edu">Bellevue University</a></p>
+            <p>1000 Galvin Rd S</p>
+            <p>Bellevue, NE 68005</p>
+        </address>
+    </div>
+</body>
+</html>
