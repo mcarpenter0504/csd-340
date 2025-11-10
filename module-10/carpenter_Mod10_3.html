@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Assignment 10.3: JavaScript - Part 2">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="author" content="Madilyn Carpenter">
+    <meta name="pragma" content="no-cache">
+    <link rel="stylesheet" href="carpenter_Mod10_3.css">
+</head>
+
+<body>
+    <div id="container">
+        <h2>Click the bread to bake it!</h2>
+        <img id="mainImage" src="bread_dough.jpeg" alt="Bread Dough" onclick="bakeBread()">
+
+        <div id="loadingText"></div>
+        <div id="loadingBox">
+            <div id="progressBar"></div>
+        </div>
+        
+        <footer>
+            <p><a href="../index.html">Back to Landing Page</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        function bakeBread() {
+            const loadingText = document.getElementById("loadingText");
+            const loadingBox = document.getElementById("loadingBox");
+            const progressBar = document.getElementById("progressBar");
+            const mainImage = document.getElementById("mainImage");
+
+            loadingBox.style.display = "block";
+            loadingText.textContent = "Baking in progress...";
+            progressBar.style.width = "0%";
+
+            let progress = 0;
+
+            const interval = setInterval(() => {
+                progress += 2;
+                progressBar.style.width = progress + "%";
+
+                if (progress >= 100) {
+                    clearInterval(interval);
+                    loadingText.textContent = "Done!";
+                    mainImage.src = "bread_loaf.jpeg";
+                }
+            }, 50);
+        }
+    </script>
+</body>
+</html>
