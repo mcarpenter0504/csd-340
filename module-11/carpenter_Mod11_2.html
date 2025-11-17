@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <meta name="description" content="Assignment 11.2: JavaScript - Part 3">
+    <meta name="robots" content="noindex">
+    <meta http-equiv="author" content="Madilyn Carpenter">
+    <meta name="pragma" content="no-cache">
+</head>
+
+<body>
+    <div id="container">
+        <input type="text" id="textInput" placeholder="Enter a value" />
+        <button onclick="addItem()">Add</button>
+        <button onclick="deleteLast()">Delete Last Entry</button>
+        <button onclick="displayItems()">Display</button>
+
+        <div id="displayArea"></div>
+               
+        <footer>
+            <p><a href="../index.html">Back to Landing Page</a></p>
+        </footer>
+    </div>
+    
+    <script>
+        let myArray = [];
+        
+        function addItem() {
+            const value = document.getElementById('textInput').value;
+            
+            if (value.trim() === '') {
+                alert('Please enter a value before adding.');
+                return;
+            }
+            
+            myArray.push(value);
+            alert(`Item: "${value}" added as item ${myArray.length}`);
+            document.getElementById('textInput').value = '';
+        }
+
+        function deleteLast() {
+            const removed = myArray.pop();
+            alert(`Deleted last entry: "${removed}"`);
+        }
+
+        function displayItems() {
+            let output = '';
+            for (let i = 0; i < myArray.length; i++) {
+                output += `${i + 1}. ${myArray[i]}<br>`;
+            }
+            document.getElementById('displayArea').innerHTML = output || 'List is empty.';
+        }
+        
+    </script>
+</body>
+</html>
